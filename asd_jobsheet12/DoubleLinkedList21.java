@@ -81,26 +81,37 @@ public class DoubleLinkedList21 {
             System.out.println("List kosong, tidak ada yang dihapus.");
             return;
         }
+        System.out.print("Data yang terhapus: ");
+        head.data.tampil();
+
         if (head == tail) {
             head = tail = null;
         } else {
             head = head.next;
             head.prev = null;
         }
-    }
+
+        System.out.println("Data sudah berhasil dihapus.");
+        }
 
     void removeLast() {
         if (isEmpty()) {
             System.out.println("List kosong, tidak ada yang dihapus.");
             return;
         }
+        System.out.print("Data yang terhapus: ");
+        tail.data.tampil();
+
         if (head == tail) {
             head = tail = null;
         } else {
             tail = tail.prev;
             tail.next = null;
         }
+
+        System.out.println("Data sudah berhasil dihapus.");
     }
+
 
     public Node21 search(String nim) {
         Node21 current = head;
